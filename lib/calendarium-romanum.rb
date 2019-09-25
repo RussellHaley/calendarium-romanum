@@ -14,6 +14,7 @@
   temporale/celebration_factory
   temporale/extensions/christ_eternal_priest
   temporale
+  ordinariate-temporale
   sanctorale
   sanctorale_loader
   sanctorale_factory

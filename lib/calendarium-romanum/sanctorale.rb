@@ -19,7 +19,8 @@ module CalendariumRomanum
       unless @days[date].nil? || @days[date].empty?
         present = @days[date][0]
         if present.rank != Ranks::MEMORIAL_OPTIONAL
-          raise ArgumentError.new("On #{date} there is already a #{present.rank}. No more celebrations can be added.")
+            puts celebration
+            raise ArgumentError.new("On #{date} there is already a #{present.rank}. No more celebrations can be added.")
         elsif celebration.rank != Ranks::MEMORIAL_OPTIONAL
           raise ArgumentError.new("Celebration of rank #{celebration.rank} cannot be grouped, but there is already another celebration on #{date}")
         end

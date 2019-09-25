@@ -183,7 +183,7 @@ locale: en
 
 = 9
 3 m gregory_great : Saint Gregory the Great, pope and doctor
-3 cuthbert : Saint Cuthbert, Bishop
+4 cuthbert : Saint Cuthbert, Bishop
 8 f bvm_birth : Birth of the Blessed Virgin Mary
 9 claver : Saint Peter Claver, priest
 12 bvm_name : Holy Name of the Blessed Virgin Mary
