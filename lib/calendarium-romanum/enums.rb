@@ -27,7 +27,8 @@ module CalendariumRomanum
         GREEN = Colour.new(:green),
         VIOLET = Colour.new(:violet),
         WHITE = Colour.new(:white),
-        RED = Colour.new(:red)
+        RED = Colour.new(:red),
+        ROSE = Colour.new(:pink)
       ]
     end
   end
@@ -46,18 +47,35 @@ module CalendariumRomanum
     attr_reader :colour
   end
 
+#   class Seasons < Enum
+#     values(index_by: :symbol) do
+#       [
+#         ADVENT = Season.new(:advent, Colours::VIOLET),
+#         CHRISTMAS = Season.new(:christmas, Colours::WHITE),
+#         LENT = Season.new(:lent, Colours::VIOLET),
+#         EASTER = Season.new(:easter, Colours::WHITE),
+#         ORDINARY = Season.new(:ordinary, Colours::GREEN)
+#       ]
+#     end
+#   end
+
+
   class Seasons < Enum
     values(index_by: :symbol) do
       [
         ADVENT = Season.new(:advent, Colours::VIOLET),
         CHRISTMAS = Season.new(:christmas, Colours::WHITE),
+        EPIPHANY = Season.new(:epiphany, Colours::ROSE),
+        TIME_AFTER_EPIPHANY = Season.new(:time_after_apiphany, Colours::ROSE),
         LENT = Season.new(:lent, Colours::VIOLET),
         EASTER = Season.new(:easter, Colours::WHITE),
+        TIME_AFTER_TRINITY = Season.new(:time_after_trinity, Colours::GREEN),
         ORDINARY = Season.new(:ordinary, Colours::GREEN)
       ]
     end
   end
 
+  
   LECTIONARY_CYCLES = [:A, :B, :C].freeze
 
   # ranks of celebrations
