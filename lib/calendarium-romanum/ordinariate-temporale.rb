@@ -1,7 +1,8 @@
 require 'calendarium-romanum'
 
 module OrdinariateCalendar
-  class Temporale < ::CalendariumRomanum::Temporale
+   
+class Temporale < ::CalendariumRomanum::Temporale
     # most of the hard work comes here
       
     def season(date)
@@ -9,48 +10,48 @@ module OrdinariateCalendar
 
       if (first_advent_sunday <= date) &&
          (nativity > date)
-        Seasons::ADVENT
+        CalendariumRomanum::Seasons::ADVENT
 
       elsif (nativity <= date) &&
             (mother_of_god   >= date)
-        Seasons::CHRISTMAS
+        CalendariumRomanum::Seasons::CHRISTMAS
 
       elsif (epiphany <= date) &&
               (baptism_of_lord >= date)
-          Seasons::EPIPHANY
+          CalendariumRomanum::Seasons::EPIPHANY
       elsif(baptism_of_lord <=date) &&
               (ash_wednesday <= date)
-        Seasons::TIME_AFTER_EPIPHANY
+        CalendariumRomanum::Seasons::TIME_AFTER_EPIPHANY
       elsif (ash_wednesday <= date) &&
             easter_sunday > date
-        Seasons::LENT
+        CalendariumRomanum::Seasons::LENT
 
       elsif (easter_sunday <= date) &&
             (pentecost >= date)
-        Seasons::EASTER        
+        CalendariumRomanum::Seasons::EASTER        
       else
-#         Seasons::ORDINARY
-          Seasons::TIME_AFTER_TRINITY
+#         CalendariumRomanum::Seasons::ORDINARY
+          CalendariumRomanum::Seasons::TIME_AFTER_TRINITY
       end
     end
 
     def season_beginning(s)
       case s
-      when Seasons::ADVENT
+      when CalendariumRomanum::Seasons::ADVENT
         first_advent_sunday
-      when Seasons::CHRISTMAS
+      when CalendariumRomanum::Seasons::CHRISTMAS
         nativity
-      when Seasons::EPIPHANY
+      when CalendariumRomanum::Seasons::EPIPHANY
         epiphany
-      when Seasons::TIME_AFTER_EPIPHANY
+      when CalendariumRomanum::Seasons::TIME_AFTER_EPIPHANY
           baptism_of_lord
-      when Seasons::LENT
+      when CalendariumRomanum::Seasons::LENT
         ash_wednesday
-      when Seasons::EASTER
+      when CalendariumRomanum::Seasons::EASTER
         easter_sunday
-#       when Seasons::ORDINARY # ordinary time
+#       when CalendariumRomanum::Seasons::ORDINARY # ordinary time
 #         baptism_of_lord + 1
-      when Seasons::TIME_AFTER_TRINITY
+      when CalendariumRomanum::Seasons::TIME_AFTER_TRINITY
           corpus_christi
       else
         raise ArgumentError.new('unsupported season')
@@ -66,7 +67,7 @@ module OrdinariateCalendar
       week = date_difference(date, week1_beginning) / WEEK + 1
       
 #       if seasonn == Seasons::ORDINARY
-      if seasonn == Seasons::TIME_AFTER_TRINITY
+      if seasonn == CalendariumRomanum::Seasons::TIME_AFTER_TRINITY
         # ordinary time does not begin with Sunday, but the first week
         # is week 1, not 0
         week += 1
@@ -89,14 +90,27 @@ module OrdinariateCalendar
         super
     end
 
-    def sunday(date)
-        super
-    end
-  end
-  
   private
 
     # seasons when Sundays have higher rank
-#     SEASONS_SUNDAY_PRIMARY = [Seasons::ADVENT, Seasons::LENT, Seasons::EASTER].freeze
+    SEASONS_SUNDAY_PRIMARY = [CalendariumRomanum::Seasons::ADVENT, CalendariumRomanum::Seasons::LENT, CalendariumRomanum::Seasons::EASTER].freeze
+  
+      def sunday(date)
+        return nil unless date.sunday?
+
+      seas = season date
+      rank = CalendariumRomanum::Ranks::SUNDAY_UNPRIVILEGED
+      if SEASONS_SUNDAY_PRIMARY.include?(seas)
+        rank = CalendariumRomanum::Ranks::PRIMARY
+      end
+
+      week = CalendariumRomanum::Ordinalizer.ordinal season_week(seas, date)
+      title = I18n.t "temporale.#{seas.to_sym}.sunday", week: week
+
+      self.class.create_celebration title, rank, seas.colour
+    end
+
+#class
+  end
 end
 
