@@ -3,9 +3,12 @@ en:
     season:
       advent: Advent
       christmas: Christmas Season
+      epiphany: Epiphany
+      time_after_epiphany: Time After Epiphany
       lent: Lent
       easter: Easter Season
-      ordinary: Ordinary Time
+      time_after_trinity: Time After Trinity
+      #ordinary: Ordinary Time
     solemnity:
       nativity: Christmas
       holy_family: The Holy Family
@@ -26,9 +29,9 @@ en:
       immaculate_heart: The Immaculate Heart of Mary
       christ_king: Christ The King
       saturday_memorial_bvm: The Memorial of the Blessed Virgin Mary on Saturday
-    ordinary:
-      sunday: '%{week} Sunday in Ordinary Time'
-      ferial: '%{weekday}, %{week} week in Ordinary Time'
+    #ordinary:
+      #sunday: '%{week} Sunday in Ordinary Time'
+      #ferial: '%{weekday}, %{week} week in Ordinary Time'
     advent:
       sunday: '%{week} Sunday of Advent'
       ferial: '%{weekday}, %{week} week of Advent'
@@ -38,8 +41,11 @@ en:
         ferial: '%{day} day of Christmas Octave'
       sunday: '%{week} Sunday after the Nativity of the Lord'
       ferial: '%{weekday} after Christmas Octave'
-      after_epiphany:
-        ferial: '%{weekday} after Epiphany'
+    epiphany:
+      ferial: '%{weekday} of Epiphany'
+    time_after_epiphany:
+      ferial: '%{weekday}, %{week} week after Epiphany'
+      sunday: '%{week} Sunday after Epiphany'
     lent:
       after_ashes:
         ferial: '%{weekday} after Ash Wednesday'
@@ -52,6 +58,12 @@ en:
         ferial: 'Easter %{weekday}'
       sunday: '%{week} Sunday of Easter'
       ferial: '%{weekday}, %{week} week of Easter'
+    pentecost:
+        octave:
+            ferial: '%{weekday} Pentecost Octave'
+    time_after_trinity:
+      sunday: '%{week} Sunday after Trinity'
+      ferial: '%{weekday}, %{week} week after Trinity'
   rank:
     '1_1': Easter triduum
     '1_2': Primary liturgical days
@@ -88,3 +100,4 @@ en:
     white: white
     green: green
     red: red
+    rose: rose

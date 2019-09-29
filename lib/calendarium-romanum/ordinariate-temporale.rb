@@ -3,11 +3,7 @@ require 'calendarium-romanum'
 module OrdinariateCalendar
    
 class Temporale < ::CalendariumRomanum::Temporale
-    # most of the hard work comes here
-      
     def season(date)
-      range_check date
-
       if (first_advent_sunday <= date) &&
          (nativity > date)
         CalendariumRomanum::Seasons::ADVENT
@@ -20,17 +16,17 @@ class Temporale < ::CalendariumRomanum::Temporale
               (baptism_of_lord >= date)
           CalendariumRomanum::Seasons::EPIPHANY
       elsif(baptism_of_lord <=date) &&
-              (ash_wednesday <= date)
+              (ash_wednesday > date)
         CalendariumRomanum::Seasons::TIME_AFTER_EPIPHANY
       elsif (ash_wednesday <= date) &&
             easter_sunday > date
         CalendariumRomanum::Seasons::LENT
-
       elsif (easter_sunday <= date) &&
-            (pentecost >= date)
-        CalendariumRomanum::Seasons::EASTER        
-      else
-#         CalendariumRomanum::Seasons::ORDINARY
+            (holy_trinity >= date)
+          #This is a hack the causes Pentecostal octave to be eigth week of easter. 
+#             (pentecost >= date)
+        CalendariumRomanum::Seasons::EASTER
+      elsif (holy_trinity <= date)
           CalendariumRomanum::Seasons::TIME_AFTER_TRINITY
       end
     end
@@ -52,7 +48,7 @@ class Temporale < ::CalendariumRomanum::Temporale
 #       when CalendariumRomanum::Seasons::ORDINARY # ordinary time
 #         baptism_of_lord + 1
       when CalendariumRomanum::Seasons::TIME_AFTER_TRINITY
-          corpus_christi
+          holy_trinity
       else
         raise ArgumentError.new('unsupported season')
       end
@@ -65,18 +61,13 @@ class Temporale < ::CalendariumRomanum::Temporale
       end
 
       week = date_difference(date, week1_beginning) / WEEK + 1
-      
-#       if seasonn == Seasons::ORDINARY
-      if seasonn == CalendariumRomanum::Seasons::TIME_AFTER_TRINITY
-        # ordinary time does not begin with Sunday, but the first week
-        # is week 1, not 0
-        week += 1
 
-        if date > pentecost
-          weeks_after_date = date_difference(Dates.first_advent_sunday(@year + 1), date) / WEEK
-          week = 34 - weeks_after_date
-          week += 1 if date.sunday?
-        end
+      if seasonn == CalendariumRomanum::Seasons::TIME_AFTER_EPIPHANY
+         week -= 1 if date.sunday? 
+      end
+
+      if seasonn == CalendariumRomanum::Seasons::TIME_AFTER_TRINITY
+         week -= 1 if date.sunday? 
       end
 
       week

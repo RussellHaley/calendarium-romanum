@@ -28,7 +28,7 @@ module CalendariumRomanum
         VIOLET = Colour.new(:violet),
         WHITE = Colour.new(:white),
         RED = Colour.new(:red),
-        ROSE = Colour.new(:pink)
+        ROSE = Colour.new(:rose)
       ]
     end
   end
@@ -66,7 +66,7 @@ module CalendariumRomanum
         ADVENT = Season.new(:advent, Colours::VIOLET),
         CHRISTMAS = Season.new(:christmas, Colours::WHITE),
         EPIPHANY = Season.new(:epiphany, Colours::ROSE),
-        TIME_AFTER_EPIPHANY = Season.new(:time_after_apiphany, Colours::ROSE),
+        TIME_AFTER_EPIPHANY = Season.new(:time_after_epiphany, Colours::ROSE),
         LENT = Season.new(:lent, Colours::VIOLET),
         EASTER = Season.new(:easter, Colours::WHITE),
         TIME_AFTER_TRINITY = Season.new(:time_after_trinity, Colours::GREEN),
