@@ -9,7 +9,8 @@ module CalendariumRomanum
     extend Forwardable
 
     # Day when the implemented calendar system became effective
-    EFFECTIVE_FROM = Date.new(1970, 1, 1).freeze
+    EFFECTIVE_FROM = Date.new(1549, 1, 1).freeze
+#     EFFECTIVE_FROM = Date.new(1970, 1, 1).freeze
 
     # year: Integer
     # returns a calendar for the liturgical year beginning with
@@ -211,7 +212,7 @@ module CalendariumRomanum
     end
 
     def system_not_effective
-      RangeError.new('Year out of range. Implemented calendar system has been in use only since 1st January 1970.')
+      RangeError.new('Year out of range. Implemented calendar system has been in use only since 1st January 1549.')
     end
   end # class Calendar
 end

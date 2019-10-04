@@ -41,6 +41,19 @@ module CalendariumRomanum
         end
       end
 
+      
+      def self.septuagesima(year)
+         self.ash_wednesday(year) - 17
+      end
+      
+      def self.sexagesima(year)
+          self.ash_wednesday(year) - 10
+      end
+      
+      def self.quinquagesima(year)
+         self.ash_wednesday(year) - 3 
+      end
+      
       def self.ash_wednesday(year)
         easter_sunday(year) - (6 * WEEK + 4)
       end

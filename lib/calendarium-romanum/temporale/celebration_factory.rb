@@ -54,6 +54,9 @@ module CalendariumRomanum
 #       Feast of the Lord ?
 #       The Presentation of the Lord (Candlemas) 
 #       Third Sunday before Lent(Septuagesima)
+      celebration(:septuagesima, Ranks::SOLEMNITY_GENERAL)
+      celebration(:sexagesima, Ranks::SOLEMNITY_GENERAL)
+      celebration(:quinquagesima, Ranks::SOLEMNITY_GENERAL)
 #       Second Sunday before Lent(Sexagesima)
 #       Sunday next before Lent(Quinquagesima)
       celebration(:ash_wednesday, Ranks::PRIMARY, Colours::VIOLET)

@@ -15,6 +15,9 @@ en:
       mother_of_god: Mary, Mother of God (Octave of Christmas)
       epiphany: The Epiphany
       baptism_of_lord: The Baptism of the Lord
+      septuagesima: Septuagesima
+      sexagesima: Sexagesima
+      quinquagesima: Quinquagesima
       ash_wednesday: Ash Wednesday
       palm_sunday: Passion Sunday (Palm Sunday)
       good_friday: Good Friday
@@ -44,8 +47,8 @@ en:
     epiphany:
       ferial: '%{weekday} of Epiphany'
     time_after_epiphany:
-      ferial: '%{weekday}, %{week} week after Epiphany'
-      sunday: '%{week} Sunday after Epiphany'
+      ferial: '%{weekday}, %{week} week after Epiphany'      
+      sunday: '%{week} Sunday after Epiphany'      
     lent:
       after_ashes:
         ferial: '%{weekday} after Ash Wednesday'

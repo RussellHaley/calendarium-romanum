@@ -61,6 +61,9 @@ module CalendariumRomanum
               mother_of_god
               epiphany
               baptism_of_lord
+              septuagesima
+              sexagesima
+              quinquagesima
               ash_wednesday
               good_friday
               holy_saturday
