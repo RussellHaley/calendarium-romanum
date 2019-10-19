@@ -108,7 +108,7 @@ module CalendariumRomanum
       def self.pentecost(year)
         easter_sunday(year) + 7 * WEEK
       end
-
+	
       def self.holy_trinity(year)
         octave_of(pentecost(year))
       end

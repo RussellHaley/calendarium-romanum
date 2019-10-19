@@ -42,6 +42,9 @@ module CalendariumRomanum
         new(liturgical_year(date))
       end
 
+	  def lit_year
+		 return new(liturgical_year(date)) 
+	  end
       # factory method creating temporale celebrations
       # with sensible defaults
       def create_celebration(title, rank, colour, symbol: nil, date: nil)

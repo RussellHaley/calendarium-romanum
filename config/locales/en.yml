@@ -24,7 +24,7 @@ en:
       holy_saturday: Holy Saturday
       easter_sunday: Easter Sunday
       ascension: The Ascension
-      pentecost: Pentecost
+      pentecost: Whit Sunday
       holy_trinity: Trinity Sunday
       corpus_christi: Corpus Christi (The Body and Blood of Christ)
       sacred_heart: The Sacred Heart of Jesus
@@ -61,12 +61,14 @@ en:
         ferial: 'Easter %{weekday}'
       sunday: '%{week} Sunday of Easter'
       ferial: '%{weekday}, %{week} week of Easter'
+      rogation: 'Rogation %{weekday}'
     pentecost:
         octave:
-            ferial: '%{weekday} Pentecost Octave'
+            ferial: '%Whit {weekday}'
     time_after_trinity:
       sunday: '%{week} Sunday after Trinity'
       ferial: '%{weekday}, %{week} week after Trinity'
+    ember_days: 'Ember Days'  
   rank:
     '1_1': Easter triduum
     '1_2': Primary liturgical days

@@ -4,12 +4,13 @@ module CalendariumRomanum
 
   # information on one particular day of the liturgical year
   class Day
-    def initialize(date: nil, season: nil, season_week: nil, celebrations: nil, vespers: nil)
+    def initialize(date: nil, season: nil, season_week: nil, celebrations: nil, vespers: nil, psalms: nil)
       @date = date
       @season = season
       @season_week = season_week
       @celebrations = celebrations ? celebrations.dup : []
       @vespers = vespers
+      @psalms = psalms
     end
 
     attr_reader :date
@@ -37,13 +38,15 @@ module CalendariumRomanum
     # Vespers, - it's an opt-in feature.
     attr_reader :vespers
 
+    attr_reader :psalms
     def ==(other)
       self.class == other.class &&
         date == other.date &&
         season == other.season &&
         season_week == other.season_week &&
         celebrations == other.celebrations &&
-        vespers == other.vespers
+        vespers == other.vespers &&
+        psalms == other.psalms
     end
 
     # Are the day's Vespers suppressed in favour of first Vespers
@@ -58,7 +61,7 @@ module CalendariumRomanum
         celebrations_string << c.to_s + ', '
       end
       celebrations_string = celebrations_string.chomp(', ') << ']'
-      "#<#{self.class.name} @date=#{date} @season=#{season} @season_week=#{season_week} celebrations=#{celebrations_string} vespers=#{vespers.inspect}>"
+      "#<#{self.class.name} @date=#{date} @season=#{season} @season_week=#{season_week} celebrations=#{celebrations_string} vespers=#{vespers.inspect} @psalms=#{psalms}>"
     end
   end
 

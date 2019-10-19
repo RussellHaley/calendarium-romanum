@@ -3,7 +3,9 @@ Anglus, Angli
 calendarium-catholica-anglus
 
 
-Rogan days?
+Rogation days - Three days following the 6ths Sunday of Easter
+
+
 
 Mark Fridays as days of abstinence. NOTE: Some fridays are NOT marked as abstinence: Dec 28 2019 (2018 year)
 
@@ -13,11 +15,17 @@ Not if it's a solemnity, feast, or memorial
 
 What do all the fonts mean in the calendar from Fr. Carl.
 
-Does CR know which "Year" the calendar is in (A, B C)?
+Does CR know which "Year" the calendar is in (A, B C)? - YES
 
 
 Shrove Tuesday is missing (Tuesday before lent)
-March 15 2019 - Ember Friday? What's an ember day? SEE DOC
+EMBER DAYS
+The Ember Daysat the four seasons are the Wednesday, Friday, and Saturday after:
+	- First Sunday of Lent 	- DONE
+	- Pentecost 14 			- DONE
+	- September13 			- DONE
+	- December				- Donish - need to find out what date we celebrate on
+
 Add Octave of Easter
 
 Add Octave of Penticost - The calendar calls it Whitsun? Doc says Whitsun Sunday, week is called Octave of Penticost and color is red

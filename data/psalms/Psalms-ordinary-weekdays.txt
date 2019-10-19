@@ -1,0 +1,69 @@
+#This file is TAB separated. The commas represent two verses or verse and part number (pt).
+#The contents of this file were scraped from http://prayerbook.ca/resources/bcponline/tables-of-psalms/
+# and modified to be readable.
+#MONTH CAGEGORIES: 
+# Category 1: JANUARY  MARCH  MAY JULY  SEPTEMBER  AND  NOVEMBER 
+# Category 2: FEBRUARY  APRIL JUNE  AUGUST  OCTOBER  AND  DECEMBER.
+#MONTH_CATEGORY MONTH MATINS EVENSONG
+1	1	1, 2, 3	4, 5
+2	1	6, 8	7
+1	2	9	10
+2	2	11, 12	13, 14
+1	3	15, 16	17
+2	3	18, Pt 1	18, Pt 2
+1	4	19	20, 21
+2	4	22. 1-21	22. 22-31, 23
+1	5	24, 26	25
+2	5	28, 29	27
+1	6	30, 32	31
+2	6	33	34
+1	7	35. 1-3 & 11-28	36
+2	7	37, Pt 1  37, Pt 2
+1	8	38	39, 41
+2	8	40	42, 43
+1	9	44	45
+2	9	46, 47	48, 49
+1	10	50	51, 52
+2	10	53, 54	55. 1-8 & 16-24
+1	11	56	57
+2	11	59	60, 61
+1	12	63, 67	62, 64
+2	12	65	66
+1	13	68, Pt 1	68, Pt 2
+2	13	69	71
+1	14	71	72
+2	14	73	74
+1	15	75, 76	77
+2	15	78, Pt 1	78, Pt 2
+1	16	79, 80	81
+2	16	82, 83. 1-8	84, 85
+1	17	86, 87	88
+2	17	89, Pt 1	89, Pt 2
+1	18	90	91
+2	18	92, 93	94
+1	19	95,* 96	97
+2	19	98, 99	100, 101
+1	20	102	103
+2	20	103	104
+1	21	105, Pt 1	105, Pt 2
+2	21	106, Pt 1	106, Pt 2
+1	22	107, Pt 1	107, Pt 2
+2	22	108	109
+1	23	110, 111	112, 113
+2	23	114, 115	116, 117
+1	24	118	119, Pts 1, 2
+2	24	119, Pts 3, 4	119, Pts 5, 6
+1	25	119, Pts 7, 8	119, Pts 9, 10
+2	25	119, Pts 11, 12	119, Pts 13, 14
+1	26	119, Pts 15, 16	119, Pts 17, 18
+2	26	119, Pts 19, 20	119, Pts 21, 22
+1	27	120, 121, 122	123, 124, 125
+2	27	126, 127, 128	129, 130, 131
+1	28	132, 133	134, 135
+2	28	136	137, 138
+1	29	139	140
+2	29	141	142, 143
+1	30	145	144, 146
+2	30	144, 146	145
+1	31	147	148, 149, 150
+2	31	148, 149, 150	147

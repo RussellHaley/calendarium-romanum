@@ -1,0 +1,96 @@
+#PSALMS TO BE USED ON SUNDAYS AND HOLY-DAYS
+#AT MATTINS AND EVENSONG TO BE SAID IN FULL
+#CELEBRATION    MORNING EVENING	INTROIT	BETWEEN_LECTIONS
+Advent 1	9	50	25. 1-7	85. 4-7
+Advent 2	96, 97, or 119, Pts 11, 12	98, 99, or 119, Pts 13, 14	80. 1-7, or 119, Pt 17	50. 1-6
+Advent 3	11, 12	13, 14	33. 1-6	80. 1-3
+Ember Days	(see Pentecost)		119, Pt 19	85. 1-3
+Advent 4	33	25	19. 1-6	145. 18-22
+The First Evensong	(of Christmas)	8, 19		
+CHRISTMAS DAY	45	85, 110	96. 1-4, or 2. 7-8	98. 5-7, or 110. 1-4
+St Stephen	15, 16	31	119. Pt 3	119, Pt 21
+St John the Evangelist	116, 117	27	92. 1-4	92. 12-15
+Innocents	26	130, 131	8. 1-2	124. 5-7
+Sundays after Christmas	132	45	93	110. 1-4
+Octave Day (Jan. 1)	85, 113	125, 126, 127	8	145. 18-22
+The First Evensong	(of the Epiphany)	66, 67		
+epiphany	THE EPIPHANY	87, 93	72	72. 1-7	72. 8-11
+Epiphany 1	66	119, Pts 1, 2	100	84. 1-4
+Epiphany 2	27	34	66. 1-3	107. 8-9
+Epiphany 3	96, 97	65, 67	148. 1-6	102. 15-18
+Epiphany 4	119, Pts 3, 4	107, Pt 1	98. 1-7	98. 8-10
+Epiphany 5	148, 149	119. Pts 5, 6	97. 1-6	126. 5-7
+Epiphany 6	139	141, 142	99. 1-5	99. 6-9
+septuagesima	Septuagesima	104, Pt 1	80	18. 1-7	119, Pt 4
+sexagesima	Sexagesima	42, 43	81	44, 24-27	17. 6-9
+quinquagesima	Quinquagesima	84, 133	103	31. 1-6	31. 22-26
+Ash Wednesday	6, 143	102	57. 1-7	103. 8-14
+Lent 1	38	32, 36	91. 1-8	91. 9-16
+Ember Days	(see Pentecost)		84. 8-13	141. 1-4
+Lent 2	51	130, 131, 134	25. 1-7	123
+Lent 3	52, 54	55 or 102	25. 8-15	25. 16-22
+Lent 4	86, 87	75, 76	122	125
+Passion Sunday	77	73	43	143. 1-10
+Palm Sunday	23, 24	118	118. 19-29, 22. 1-11	22. 12-21
+Monday In Holy Week	94	69	35. 1-3	79. 8-10
+Tuesday	71	79	69. 17-22	35. 11-16
+Wednesday	109	120, 140	102. 1-11	55. 12-15
+Maundy Thursday	40, 41	116, 117	67	22. 22-26
+Good Friday	22	88		54
+Holy Saturday	16, 30	27	42. 1-7	42. 8-14
+easter_sunday	EASTER DAY	2, 3	113, 114	139. 1-5, 17-18, or 30. 1-5	118. 22-25
+Monday, Easter Week	20, 21	118	105. 1-6	118. 22-25
+Tuesday	34	29, 30	106. 1-5	118. 22-25
+Wednesday	42, 43	147	(see Easter Day)	(see Easter Day)
+Thursday	81	66	(see Easter Day)	(see Easter Day)
+Friday	103	145	(see Easter Day)	(see Easter Day)
+Saturday	27	146, 150	(see Easter Day)	(see Easter Day)
+Easter 1	56, 57	111, 112	81. 1-4	118. 22-25
+Easter 2	135	23, 115	33. 1-9	63. 1-4
+Easter 3	121, 122	123, 124, 125	66. 1-6	66. 7-8
+Easter 4	126, 127, 128	136	98. 1-4	118, 15-18
+Rogation Sunday	46, 63	61, 62	107, 1-9	66. 15-19
+Rogation Monday	126, 144	104	4	23
+Rogation Tuesday	68. Pt 1	65, 67	18. 1-7	118. 1-4
+Rogation Wednesday	11, 12, 13		65. 10-15	23
+The First Evensong	(of the Ascension)	68, Pt 2		
+ASCENSION DAY	8, 15	24, 47	47, 1-7	68, 17-20
+Ascension 1	20, 21	98, 99	27. 1-12	47. 5-10
+The First Evensong	(of Whitsunday)	42, 117		
+PENTECOST	145	48, 104, Pt 2	68. 1-6, or 122	68. 7-10, or 125
+Monday in Octave	66, 67	86, 87	81. 13-16	104. 28-31
+Tuesday	46, 48	119, Pts 1, 2, 3	78. 1-8	23. 1-4
+W. Ember Day	119, Pts 4, 5	119, Pts 6, 7, 8	132. 7-10	135. 19-21
+Thursday	119. pts 9. 10	119, Pts 11, 12, 13	(see Pentecost)	(see Pentecost)
+F. Ember Day	119, Pts 14, 15	119, Pts 16, 17, 18	(see Ember Wednesday)	(see Ember Wednesday)
+S. Ember Day	119, Pts 19, 20	119. Pts 21, 22	(see Ember Wednesday)	(see Ember Wednesday)
+Trinity Sunday	92, 93	146, 150	8	136. 1-3
+Trinity 1	1, 5	4, 6	13	41. 1-4
+Trinity 2	7, 8	15, 16	18. 18-21	23. 5-6
+Trinity 3	26	19, 20	25. 16-22	7. 9-12
+Trinity 4	18, Pt 1	18, Pt 2	27. 1-7	9. 9-12
+Trinity 5	28, 29	30, 32	27. 8-16	84. 8-13
+Trinity 6	34	31	28. 7-10	90. 14-18
+Trinity 7	37, Pt 1	37, Pt 2	47. 1-4	34. 11-15
+Trinity 8	39, 41	40	48. 1-12	48. 13-15
+Trinity 9	44	46, 47	54	105. 39-43
+Trinity 10	50	51	55. 1-8, 22	137
+Trinity 11	65, 67	68	111	51. 15-17
+Trinity 12	69	71	70	34. 1-5
+Trinity 13	72	74	90. 1-13	90. 14-18
+Trinity 14	78, Pt 1, or 119, Pts 7, 8	78, Pt 2, or 119, Pts 9, 10	84	95, 1-3
+Trinity 15	79	84, 85	86. 1-7	92. 1-4
+Trinity 16	90	91	146. 1-6	146. 7-10
+Trinity 17	119. Pts 15, 16	102	119, Pt 18	131
+Ember Days	(see Pentecost)		81. 1-10	105. 1-6
+Trinity 18	105, Pt 1, or 119, Pts 17, 18	105. Pt 2, or 119, Pts 19, 20	122. 1-5	122. 6-9
+Trinity 19	106, Pt 1, or 119, Pts 21, 22	106, Pt 2, or 100, 101	138	103. 1-5
+Trinity 20	107, Pt 1	107, Pt 2, 108	145. 1-13	145. 14-17
+Trinity 21	147	116, 117	119, Pt 1	114. 1-4
+Trinity 22	118	121, 122, 123	130	133
+Trinity 23	137, 138	103	121	24. 7-10
+Trinity 24	143	17, or 145	147. 1-11	147. 12-15
+#The original calendar from http://prayerbook.ca/resources/bcponline/tables-of-psalms/ specifies to use Epiphany 5 onward for extra trinity weeks
+Trinity 25	148, 149	119. Pts 5, 6	97. 1-6	126. 5-7
+Trinity 26	139	141, 142	99. 1-5	99. 6-9
+Trinity 27	104, Pt 1	80	18. 1-7	119, Pt 4
