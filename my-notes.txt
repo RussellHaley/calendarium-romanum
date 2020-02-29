@@ -37,3 +37,6 @@ Monthly Requiems?
 The Rogation Days - See DOC
 
 Dedication Festival
+
+
+ruby -I lib cmds.rb 2018 3 3
