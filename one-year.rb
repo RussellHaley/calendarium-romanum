@@ -26,6 +26,7 @@ days = Array.new(365)
  
 for i in 0..364
         #puts start_date 
+        #THIS IS A HACK to deal with leap year. I don't know why it dies yet but it does so I just repeat the day
         if start_date.month == 2 and start_date.day > 28 then
           days[i] = calendar.day(start_date.month,start_date.day - 1)
         else
