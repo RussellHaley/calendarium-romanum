@@ -11,11 +11,11 @@ module CalendariumRomanum
       end
 
       def self.holy_family(year)
-        xmas = nativity(year)
-        if xmas.sunday?
+        christmas = nativity(year)
+        if christmas.sunday?
           return Date.new(year, 12, 30)
         else
-          sunday_after(xmas)
+          sunday_after(christmas)
         end
       end
 
@@ -29,7 +29,7 @@ module CalendariumRomanum
           return sunday_after(Date.new(year + 1, 1, 1))
         end
 
-        Date.new(year + 1, 1, 6)
+        sunday_after(Date.new(year + 1, 1, 1))
       end
 
       def self.baptism_of_lord(year, epiphany_on_sunday: false)
@@ -119,7 +119,7 @@ module CalendariumRomanum
           return holy_trinity(year) + WEEK
         end
 
-        holy_trinity(year) + 4
+        holy_trinity(year) + WEEK
       end
 
       def self.sacred_heart(year)

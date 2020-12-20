@@ -112,8 +112,8 @@ class Temporale < ::CalendariumRomanum::Temporale
       week = date_difference(date, week1_beginning) / WEEK + 1
 
       if seasonn == CalendariumRomanum::Seasons::TIME_AFTER_EPIPHANY
-#          week -= 1 if date.sunday? 
-          week += 1
+          #week -= 1 if date.sunday? 
+          #week += 1
       end
       
       if seasonn == CalendariumRomanum::Seasons::TIME_AFTER_TRINITY

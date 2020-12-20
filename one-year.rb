@@ -2,7 +2,7 @@ require 'calendarium-romanum'
 require 'parse_psalms'
 
 
-year = 2019
+year = 2020
 
 holy_days_file='data/psalms/Psalms-for-sundays-and-holy-days.txt'
 ordinary_days_file='data/psalms/Psalms-ordinary-weekdays.txt'
@@ -18,15 +18,20 @@ psalms_ordinary = 	pfd.read_file(ordinary_days_file)
 psalms_holy_days = pfd.read_file(holy_days_file)
 psalms_saints = pfd.read_file(psalms_saints_file)
 
-start_date = Date.new(year,1,1)
+start_date = Date.new(year , 11, 1)
 
-end_date = Date.new(year,12,31)
+end_date = Date.new(year, 10, 30)
 
 days = Array.new(365)
  
 for i in 0..364
-	days[i] = calendar.day(start_date.month,start_date.day)
-# 	puts(start_date)
+        #puts start_date 
+        if start_date.month == 2 and start_date.day > 28 then
+          days[i] = calendar.day(start_date.month,start_date.day - 1)
+        else
+          days[i] = calendar.day(start_date.month,start_date.day)
+        end
+          # 	puts(start_date)
 	start_date += 1	
 end
 
