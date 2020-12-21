@@ -84,6 +84,10 @@ module CalendariumRomanum
         end
       end
 
+	def self.passion_sunday(year)
+        easter_sunday(year) - 14
+      end
+      
       def self.palm_sunday(year)
         easter_sunday(year) - 7
       end
@@ -123,7 +127,7 @@ module CalendariumRomanum
       end
 
       def self.sacred_heart(year)
-        corpus_christi(year) + 8
+        corpus_christi(year) + 5
       end
 
       def self.mother_of_church(year)

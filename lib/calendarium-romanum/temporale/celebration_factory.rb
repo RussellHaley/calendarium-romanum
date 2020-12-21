@@ -72,6 +72,7 @@ module CalendariumRomanum
 #       Maundy Thursday
       celebration(:good_friday, Ranks::TRIDUUM, Colours::RED)
       celebration(:holy_saturday, Ranks::TRIDUUM, Colours::VIOLET)
+      celebration(:passion_sunday, Ranks::PRIMARY, Colours::RED)
       celebration(:palm_sunday, Ranks::PRIMARY, Colours::RED)
       celebration(:easter_sunday, Ranks::TRIDUUM)
 #     Monday of Easter Week

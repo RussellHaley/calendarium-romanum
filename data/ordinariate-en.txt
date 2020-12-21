@@ -112,7 +112,7 @@ locale: en
 #22 paulinus : Saint Paulinus of Nola, bishop
 22 R fisher_more : Saints John Fisher, bishop and martyr and Thomas More, martyr
 23 all_holy_nuns : Sts Hilda, Etheldreda, Mildred and All Holy Nuns
-24 s baptist_birth : Birth of Saint John the Baptist
+24 s baptist_birth : Nativity of Saint John the Baptist
 27 cyril_of_alexandria : Saint Cyril of Alexandria, bishop and doctor
 28 m R irenaeus : Saint Irenaeus, bishop and martyr
 29 s R peter_paul : Saints Peter and Paul, Apostles
@@ -184,7 +184,7 @@ locale: en
 = 9
 3 m gregory_great : Saint Gregory the Great, pope and doctor
 4 cuthbert : Saint Cuthbert, Bishop
-8 f bvm_birth : Birth of the Blessed Virgin Mary
+8 f bvm_birth : Nativity of the Blessed Virgin Mary
 9 claver : Saint Peter Claver, priest
 12 bvm_name : Holy Name of the Blessed Virgin Mary
 13 m john_chrysostom : Saint John Chrysostom, bishop and doctor
@@ -197,18 +197,20 @@ locale: en
 19 adrian : Saint Adrian, Abbot
 20 m R korean_martyrs : Saint Andrew Kim Taegon, priest, and Paul Chong Hasang and companions, martyrs
 21 f R matthew : Saint Matthew the Evangelist, Apostle, Evangelist
-23 m padre_pio : Saint Pio of Pietrelcina (Padre Pio), priest
+23 m padre_pio : Saint Pius of Pietrelcina (Padre Pio), priest
+24 f W lady_of_walshingham : Our Lady of Walshingham
 26 R cosmas_damian : Saints Cosmas and Damian, martyrs
-27 m vincent_de_paul : Saint Vincent de Paul, priest
+27 W vincent_de_paul : Saint Vincent de Paul, priest
 28 R wenceslaus : Saint Wenceslaus, martyr
 28 R ruiz : Saints Lawrence Ruiz and companions, martyrs
-29 f archangels : Saints Michael, Gabriel and Raphael, Archangels
+29 f W archangels : Michaelmas (Saints Michael, Gabriel and Raphael, Archangels)
 30 m jerome : Saint Jerome, priest and doctor
 
 = 10
 1 m therese_lisieux : Saint Thérèse of the Child Jesus, virgin and doctor
 2 m guardian_angels : Guardian Angels
 4 m francis_assisi : Saint Francis of Assisi
+5 W faustina_kowalska : Saint Faustina Kowalksa, Virgin
 6 bruno : Saint Bruno, priest
 6 durocher : Blessed Marie Rose Durocher, Virgin
 7 m bvm_rosary : Our Lady of the Rosary

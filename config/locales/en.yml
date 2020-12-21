@@ -19,7 +19,8 @@ en:
       sexagesima: Sexagesima
       quinquagesima: Quinquagesima
       ash_wednesday: Ash Wednesday
-      palm_sunday: Passion Sunday (Palm Sunday)
+      passion_sunday: Passion Sunday
+      palm_sunday: Palm Sunday
       good_friday: Good Friday
       holy_saturday: Holy Saturday
       easter_sunday: Easter Sunday
@@ -52,10 +53,14 @@ en:
     lent:
       after_ashes:
         ferial: '%{weekday} after Ash Wednesday'
-      sunday: '%{week} Sunday of Lent'
       ferial: '%{weekday}, %{week} week of Lent'
+      sunday: '%{week} Sunday of Lent'
+      passion_week:
+        lady_day: 'Lady Day'
+        ferial: '%{weekday} in Passion Week'
       holy_week:
-        ferial: '%{weekday} of Holy Week'
+        ferial: 'Holy %{weekday}'
+        spy_wednesday: 'Spy Wednesday'
     easter:
       octave:
         ferial: 'Easter %{weekday}'

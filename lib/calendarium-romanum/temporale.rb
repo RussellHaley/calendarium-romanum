@@ -54,7 +54,10 @@ module CalendariumRomanum
       C = Struct.new(:date_method, :celebration)
       private_constant :C
 
-      # implementation detail, not to be touched by client code
+      # 2020-12-20: Updated for Ordinaraite Calendar.
+      #NOTE: This is the list from ordinariate-temporal.rb.
+      #I have had to duplicate the chages here because I don't understand
+      #Ruby OO.
       def celebrations
         @celebrations ||=
           begin
@@ -70,6 +73,7 @@ module CalendariumRomanum
               ash_wednesday
               good_friday
               holy_saturday
+              passion_sunday
               palm_sunday
               easter_sunday
               ascension
@@ -173,8 +177,8 @@ module CalendariumRomanum
         ash_wednesday
       when Seasons::EASTER
         easter_sunday
-      when Seasons::ORDINARY # ordinary time
-        baptism_of_lord + 1
+      #~ when Seasons::ORDINARY # ordinary time
+        #~ baptism_of_lord + 1
       else
         raise ArgumentError.new('unsupported season')
       end
@@ -256,48 +260,103 @@ module CalendariumRomanum
       self.class.create_celebration title, rank, seas.colour
     end
 
-    def ferial(date)
+ def ferial(date)
       seas = season date
       week = season_week(seas, date)
-      rank = Ranks::FERIAL
+      rank = CalendariumRomanum::Ranks::FERIAL
       title = nil
       case seas
-      when Seasons::ADVENT
+      when CalendariumRomanum::Seasons::ADVENT
+		d = Date.new(@year, 12, 1)
+		if date >= d && date <= d + 14
+			if d.wday == 0 
+				offset = 0
+			else
+				offset = 7 - d.wday
+			end
+			dec_ember = [d + offset + 3, d + offset + 5, d + offset + 6]
+			if dec_ember.include? date
+				rank = CalendariumRomanum::Ranks::FERIAL_PRIVILEGED
+			title = I18n.t 'temporale.ember_days', weekday: I18n.t("weekday.#{date.wday}")
+			end
+		end
+
         if date >= Date.new(@year, 12, 17)
-          rank = Ranks::FERIAL_PRIVILEGED
-          nth = Ordinalizer.ordinal(date.day)
+          rank = CalendariumRomanum::Ranks::FERIAL_PRIVILEGED
+          nth = CalendariumRomanum::Ordinalizer.ordinal(date.day)
           title = I18n.t 'temporale.advent.before_christmas', day: nth
         end
-      when Seasons::CHRISTMAS
+      when CalendariumRomanum::Seasons::CHRISTMAS
         if date < mother_of_god
-          rank = Ranks::FERIAL_PRIVILEGED
+          rank = CalendariumRomanum::Ranks::FERIAL_PRIVILEGED
 
-          nth = Ordinalizer.ordinal(date.day - nativity.day + 1) # 1-based counting
+          nth = CalendariumRomanum::Ordinalizer.ordinal(date.day - nativity.day + 1) # 1-based counting
           title = I18n.t 'temporale.christmas.nativity_octave.ferial', day: nth
         elsif date > epiphany
           title = I18n.t 'temporale.christmas.after_epiphany.ferial', weekday: I18n.t("weekday.#{date.wday}")
         end
-      when Seasons::LENT
+      when CalendariumRomanum::Seasons::TIME_AFTER_EPIPHANY
+      when CalendariumRomanum::Seasons::LENT
         if week == 0
           title = I18n.t 'temporale.lent.after_ashes.ferial', weekday: I18n.t("weekday.#{date.wday}")
-        elsif date > palm_sunday
-          rank = Ranks::PRIMARY
+		elsif week == 1
+# 			Ember days after first sunday of lent
+			if [3,5,6].include? date.wday
+				rank = CalendariumRomanum::Ranks::FERIAL_PRIVILEGED
+				title = I18n.t 'temporale.ember_days', weekday: I18n.t("weekday.#{date.wday}")
+			end
+		#PASSION WEEK
+		elsif date > passion_sunday and date < palm_sunday
+			rank = CalendariumRomanum::Ranks::PRIMARY
+			puts 'feel the boom'
+			if date.wday == 4 then
+				title = I18n.t 'temporale.lent.passion_week.lady_day', weekday: I18n.t("weekday.#{date.wday}")
+          else
+				title = I18n.t 'temporale.lent.passion_week.lady_day', weekday: I18n.t("weekday.#{date.wday}")
+          end
+		elsif date > palm_sunday
+          rank = CalendariumRomanum::Ranks::PRIMARY
           title = I18n.t 'temporale.lent.holy_week.ferial', weekday: I18n.t("weekday.#{date.wday}")
         end
-        rank = Ranks::FERIAL_PRIVILEGED unless rank > Ranks::FERIAL_PRIVILEGED
-      when Seasons::EASTER
+        rank = CalendariumRomanum::Ranks::FERIAL_PRIVILEGED unless rank > CalendariumRomanum::Ranks::FERIAL_PRIVILEGED
+      when CalendariumRomanum::Seasons::EASTER
         if week == 1
-          rank = Ranks::PRIMARY
-          title = I18n.t 'temporale.easter.octave.ferial', weekday: I18n.t("weekday.#{date.wday}")
+          rank = CalendariumRomanum::Ranks::PRIMARY
+          title = I18n.t 'temporale.easter.octave.ferial', weekday: I18n.t("weekday.#{date.wday}")		
         end
+		if week == 6
+			if date.wday >= 1 && date.wday <4
+				title = I18n.t 'temporale.easter.rogation', weekday: I18n.t("weekday.#{date.wday}")		
+			end
+		end
+# 		Pentecost Ember Days
+		if [pentecost + 3, pentecost + 5, pentecost + 6].include? date		
+			rank = CalendariumRomanum::Ranks::FERIAL_PRIVILEGED
+			title = I18n.t 'temporale.ember_days', weekday: I18n.t("weekday.#{date.wday}")
+
+		end
+		when CalendariumRomanum::Seasons::TIME_AFTER_TRINITY
+		   
+			d = Date.new(date.year, 9, 14)
+			if date >= d && (date <= d + 14)
+				if d.wday == 0
+					offset = 0
+				else
+					offset = 7 - d.wday
+				end
+				sept_ember = [d + offset + 3, d + offset + 5, d + offset + 6]
+				if sept_ember.include? date
+					rank = CalendariumRomanum::Ranks::FERIAL_PRIVILEGED
+					title = I18n.t 'temporale.ember_days', weekday: I18n.t("weekday.#{date.wday}")
+			end
+		   end
       end
 
-      week_ord = Ordinalizer.ordinal week
+      week_ord = CalendariumRomanum::Ordinalizer.ordinal week
       title ||= I18n.t "temporale.#{seas.to_sym}.ferial", week: week_ord, weekday: I18n.t("weekday.#{date.wday}")
 
       self.class.create_celebration title, rank, seas.colour
     end
-
     # helper: difference between two Dates in days
     def date_difference(d1, d2)
       (d1 - d2).numerator

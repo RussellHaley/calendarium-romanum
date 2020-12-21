@@ -4,8 +4,10 @@ module OrdinariateCalendar
    
 class Temporale < ::CalendariumRomanum::Temporale
 
-	  
-      # implementation detail, not to be touched by client code
+
+      # 2020-12-20: Updated for Ordinaraite Calendar.
+      #NOTE: This list is duplicated in temporale.rb becuase I don't
+     # understand Ruby OO yet.
       def celebrations
         @celebrations ||=
           begin
@@ -21,6 +23,7 @@ class Temporale < ::CalendariumRomanum::Temporale
               ash_wednesday
               good_friday
               holy_saturday
+              passion_sunday
               palm_sunday
               easter_sunday
               ascension
@@ -72,7 +75,7 @@ class Temporale < ::CalendariumRomanum::Temporale
         CalendariumRomanum::Seasons::LENT
       elsif (easter_sunday <= date) &&
             (holy_trinity >= date)
-#This is a hack the causes 																																																																																																																																																								 Pentecostal octave to be eigth week of easter. 
+#This is a hack the causes Pentecostal octave to be eigth week of easter. 
 #             (pentecost >= date)
         CalendariumRomanum::Seasons::EASTER
       elsif (holy_trinity <= date)
@@ -172,9 +175,21 @@ class Temporale < ::CalendariumRomanum::Temporale
 				rank = CalendariumRomanum::Ranks::FERIAL_PRIVILEGED
 				title = I18n.t 'temporale.ember_days', weekday: I18n.t("weekday.#{date.wday}")
 			end
-		elsif date > palm_sunday
+		#PASSION WEEK
+		elsif date > passion_sunday and date < palm_sunday
+			rank = CalendariumRomanum::Ranks::PRIMARY
+			if date.wday == 4 then
+				title = I18n.t 'temporale.lent.passion_week.lady_day', weekday: I18n.t("weekday.#{date.wday}")
+			else
+				title = I18n.t 'temporale.lent.passion_week.ferial', weekday: I18n.t("weekday.#{date.wday}")
+			end
+		elsif date >=palm_sunday
           rank = CalendariumRomanum::Ranks::PRIMARY
-          title = I18n.t 'temporale.lent.holy_week.ferial', weekday: I18n.t("weekday.#{date.wday}")
+          if date.wday == 3 then
+				title = I18n.t 'temporale.lent.holy_week.spy_wednesday', weekday: I18n.t("weekday.#{date.wday}")
+			else
+				title = I18n.t 'temporale.lent.holy_week.ferial', weekday: I18n.t("weekday.#{date.wday}")
+          end
         end
         rank = CalendariumRomanum::Ranks::FERIAL_PRIVILEGED unless rank > CalendariumRomanum::Ranks::FERIAL_PRIVILEGED
       when CalendariumRomanum::Seasons::EASTER
@@ -194,15 +209,18 @@ class Temporale < ::CalendariumRomanum::Temporale
 
 		end
 		when CalendariumRomanum::Seasons::TIME_AFTER_TRINITY
-		   
+		
+			#Embder days after September 14. If Septemeber 14 is after Wednesday
+			#		Embder days fall on in the next week.
 			d = Date.new(date.year, 9, 14)
 			if date >= d && (date <= d + 14)
-				if d.wday == 0
-					offset = 0
+				sept_ember = nil
+				if d.wday < 3
+					sept_ember = [d  + (3 - d.wday), d + (5 - d.wday), d + (6 - d.wday)]
 				else
-					offset = 7 - d.wday
+					sept_ember = [d  + (10 - d.wday) , d + (12 - d.wday), d + (13 - d.wday)]
 				end
-				sept_ember = [d + offset + 3, d + offset + 5, d + offset + 6]
+
 				if sept_ember.include? date
 					rank = CalendariumRomanum::Ranks::FERIAL_PRIVILEGED
 					title = I18n.t 'temporale.ember_days', weekday: I18n.t("weekday.#{date.wday}")
