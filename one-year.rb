@@ -30,7 +30,7 @@ psalms_saints = pfd.read_file(psalms_saints_file)
 #~ calendar = CalendariumRomanum::Calendar.new(year, sanctorale, temporale)
 #~ calendar.each do |day|
 CalendariumRomanum::Calendar.new(year, sanctorale, temporale).each do |day|
-	puts "Calendar Date: #{day.date.to_s} #{day.date.strftime('%A')}"
+	puts "Calendar Date: #{day.date} #{day.date.strftime('%A')}"
 		celebration = day.celebrations[0]
 		day.celebrations.each do | c |
 			puts "\t" + c.title
