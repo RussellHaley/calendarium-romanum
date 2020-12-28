@@ -100,13 +100,20 @@ module CalendariumRomanum
         easter_sunday(year) - 1
       end
 
+
+	def self.rogation_sunday(year)
+		easter_sunday(year) + 5 * WEEK
+	end
+	
+	
       def self.ascension(year, sunday: false)
         if sunday
           # GNLYC 7 b)
           return easter_sunday(year) + 6 * WEEK
         end
 
-        pentecost(year) - 10
+		easter_sunday(year) + (5 * WEEK) + 4
+        #~ pentecost(year) - 10
       end
 
       def self.pentecost(year)

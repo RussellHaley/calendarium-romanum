@@ -26,6 +26,7 @@ class Temporale < ::CalendariumRomanum::Temporale
               passion_sunday
               palm_sunday
               easter_sunday
+              rogation_sunday
               ascension
               pentecost
               holy_trinity

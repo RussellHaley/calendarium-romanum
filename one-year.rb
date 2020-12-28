@@ -18,9 +18,7 @@ psalms_ordinary = 	pfd.read_file(ordinary_days_file)
 psalms_holy_days = pfd.read_file(holy_days_file)
 psalms_saints = pfd.read_file(psalms_saints_file)
 
-start_date = Date.new(year , 11, 1)
-
-end_date = Date.new(year, 10, 30)
+start_date = Date.new(year , 11, 29)
 
 days = Array.new(365)
  
@@ -38,7 +36,8 @@ end
 
 def generate_data(days, pfd, psalms_ordinary)
 	
-	days.each do |day|
+	for i in 0..364
+		day = days[i]
 		puts "Calendar Date: #{day.date.to_s} #{day.date.strftime('%A')}"
 		celebration = day.celebrations[0]
 		day.celebrations.each do | c |

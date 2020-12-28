@@ -85,7 +85,7 @@ module CalendariumRomanum
 #     Third Sunday of Easter
 #     Fourth Sunday of Easter
 #     Fifth Sunday of Easter
-#     Sixth Sunday of Easter
+		celebration(:rogation_sunday, Ranks::SOLEMNITY_PROPER, Colours::WHITE)
       celebration(:ascension, Ranks::PRIMARY)
 #       Seventh Sunday of Easter (Sunday after Ascension)
       celebration(:pentecost, Ranks::PRIMARY, Colours::RED)

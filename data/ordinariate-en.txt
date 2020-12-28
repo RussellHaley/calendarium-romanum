@@ -84,6 +84,8 @@ locale: en
 14 f R matthias : Saint Matthias the Apostle
 18 R john_i : Saint John I, pope and martyr
 20 bernardine : Saint Bernardine of Siena, priest
+21 W helena : Saint Helena
+21 W godric_of_finchale : Saint Godric of Finchale, religious
 21 R magallanes : Saint Christopher Magallanes and companions, martyrs
 22 rita : Saint Rita of Cascia
 25 bede_venerable : Saint Bede the Venerable, priest and doctor
