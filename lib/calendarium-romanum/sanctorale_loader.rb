@@ -27,7 +27,11 @@ module CalendariumRomanum
       'w' => Colours::WHITE,
       'v' => Colours::VIOLET,
       'g' => Colours::GREEN,
-      'r' => Colours::RED
+      'r' => Colours::RED,
+      'b'=> Colours::BLACK,
+      'l'=> Colours::BLUE,
+      'o'=>Colours::ROSE,
+      'd'=>Colours::GOLD
     }.freeze
 
     # dest should be a Sanctorale,

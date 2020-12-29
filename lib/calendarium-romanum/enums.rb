@@ -21,6 +21,7 @@ module CalendariumRomanum
     end
   end
 
+#~ https://jakubmarian.com/difference-between-violet-and-purple/
   class Colours < Enum
     values(index_by: :symbol) do
       [
@@ -28,7 +29,10 @@ module CalendariumRomanum
         VIOLET = Colour.new(:violet),
         WHITE = Colour.new(:white),
         RED = Colour.new(:red),
-        ROSE = Colour.new(:rose)
+        BLACK = Colour.new(:black),
+        BLUE = Colour.new(:blue),
+        ROSE = Colour.new(:rose),
+        GOLD = Colour.new(:gold)
       ]
     end
   end
@@ -65,8 +69,8 @@ module CalendariumRomanum
       [
         ADVENT = Season.new(:advent, Colours::VIOLET),
         CHRISTMAS = Season.new(:christmas, Colours::WHITE),
-        EPIPHANY = Season.new(:epiphany, Colours::ROSE),
-        TIME_AFTER_EPIPHANY = Season.new(:time_after_epiphany, Colours::ROSE),
+        EPIPHANY = Season.new(:epiphany, Colours::WHITE),
+        TIME_AFTER_EPIPHANY = Season.new(:time_after_epiphany, Colours::GREEN),
         LENT = Season.new(:lent, Colours::VIOLET),
         EASTER = Season.new(:easter, Colours::WHITE),
         TIME_AFTER_TRINITY = Season.new(:time_after_trinity, Colours::GREEN),
